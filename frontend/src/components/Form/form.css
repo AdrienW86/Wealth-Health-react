@@ -1,0 +1,49 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin: auto;
+    padding-top: 40px
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    color: rgb(60, 123, 60)
+}
+
+label {
+    color: rgb(60, 123, 60);
+    font-weight: bold;
+}
+
+.select-adress {
+    margin-bottom: 5px;
+}
+
+.btn-submit {
+    display: flex;
+    width: 160px;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    left: 100px;
+    margin:  40px 0;
+    background: rgb(60, 123, 60);
+    color: white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.btn-submit:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+input {
+    margin: 6px 0;
+}
+
+fieldset {
+    margin: 20px 0;
+}
