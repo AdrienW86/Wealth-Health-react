@@ -1,5 +1,11 @@
-h1 {
+h2 {
     text-align: center;
     color: white;
     font-size: 2em;
+}
+
+@media (min-width: 320px) {
+    h2 {
+        font-size: 1em;
+    }
 }

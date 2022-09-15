@@ -25,7 +25,7 @@ useEffect(() => {
   return (
     <header>
         <nav className='navbar'>
-          <ul>
+          <ul className='li-items'>
             <li className='logo-link'>
                 <img 
                     className='logo'
@@ -36,9 +36,9 @@ useEffect(() => {
             </li>           
             {pathList 
             ?
-            <li className = 'link'>
-                <Link 
-                    className = 'link'
+            <li className='link' >
+                <Link   
+                    className='nav-link'                
                     to = "/"
                 > 
                     <p className='link-text'>
@@ -47,9 +47,9 @@ useEffect(() => {
                 </Link>
             </li>
             :      
-            <li className = 'link'>
+            <li className='link'>
                 <Link 
-                    className = 'link'                   
+                    className='nav-link'         
                     to = "/list"
                 > 
                     <p className='link-text'>

@@ -8,3 +8,55 @@
     top: 5px;
     border: 1px solid green;
 }
+
+@media (max-width: 968px) {
+    .select-container {
+        font-size: 0.7em;
+        display: flex;
+        position: relative;
+        top: 10px;
+    }
+
+    .searchbar_and_select-container {
+        justify-content: space-between;
+    }
+    .select {
+        position: relative;
+        top: 8px;
+    }
+    .search {
+        width: 120px;
+    }
+}   
+
+@media (max-width: 380px) {
+    .select-container {
+        font-size: 0.6em;
+        display: flex;
+        position: relative;
+        width: 160px;
+        top: 10px;
+        padding: 0;
+        margin: 0
+    }
+
+    .search-container {
+        display: flex;
+        width: 120px;
+    }
+
+    .searchbar_and_select-container {
+        display: flex;
+        width: 300px;
+        padding: 0;
+        margin: 0;
+        justify-content: space-around;
+    }
+    .select {
+        position: relative;
+        top: 4px;
+    }
+    .search {
+        width: 100px;
+    }
+}   

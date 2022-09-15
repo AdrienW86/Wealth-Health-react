@@ -32,3 +32,15 @@
 .btn-prev:hover, .btn-next:hover {
    cursor: pointer;
 }
+
+@media (max-width: 968px) {
+   .pagination {
+      padding: 0;
+   }
+}
+
+@media (max-width: 1380px) {
+   .pagination {
+      padding: 0;
+   }
+}

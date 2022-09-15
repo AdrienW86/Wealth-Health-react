@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     background: rgb(60, 123, 60);
+    width: 100%;
 }
 
 .modal {

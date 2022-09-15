@@ -8,24 +8,21 @@ export default function Title() {
     const location = useLocation()
     const currentLocation = location.pathname
 
-   
-        
-
 useEffect(() => {
   if( currentLocation === "/list") {
     setHomeTitle(true)
   }
-  else {(
-    setHomeTitle(false))
+  else {
+    setHomeTitle(false)
   }
 },[currentLocation])
 
   return (
     <>{homeTitle
         ?
-          <h1>Current Employees</h1>
+          <h2>Current Employees</h2>
         :           
-          <h1>Create Employee</h1>
+          <h2>Create Employee</h2>
     }</>
   )
 }

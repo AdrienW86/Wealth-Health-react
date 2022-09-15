@@ -47,3 +47,13 @@ input {
 fieldset {
     margin: 20px 0;
 }
+
+@media (min-width: 320px) and (max-width: 968px) {
+    .form {
+        width: 300px;
+    }
+    .btn-submit {
+        position: relative;
+        left: 65px;
+    }
+}

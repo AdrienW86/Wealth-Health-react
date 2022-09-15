@@ -70,7 +70,6 @@ return(
             let re = /-/gi;
             values.dateOfBirth = values.dateOfBirth.replace(re, '/')
             values.startDate = values.startDate.replace(re, '/')
-            values.state = values.state
             values.zip = values.zip.toString()
             console.log(values.state)
             setData(values)

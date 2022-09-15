@@ -30,24 +30,29 @@ const Table =({currentPosts, value}) => {
       <thead className='table-header'>
         <tr className='columns'>          
         {columns.map((column) => {
-            return <th className='table-columns' key={column.id}> {column.headerName} 
-              <div className='btn-container' >               
-                <button 
-                className='btn-up'
-                aria-label='btn asc'
-                value={column.field}
-                onClick={sortByAsc}
-                >
-                </button>               
-                <button 
-                  className='btn-down' 
-                  aria-label='btn desc'
-                  value={column.field}
-                  onClick={sortByDesc}
-                >
-                </button>                
-              </div>            
-            </th>
+          return <th className='table-columns' 
+                     key={column.id}
+                  >                    
+                    <div className='btn-container' >               
+                      <button 
+                        className='btn-up'
+                        aria-label='btn asc'
+                        value={column.field}
+                        onClick={sortByAsc}
+                      >
+                      </button>               
+                      <button 
+                        className='btn-down' 
+                        aria-label='btn desc'
+                        value={column.field}
+                        onClick={sortByDesc}
+                      >
+                      </button>                
+                    </div> 
+                    <div className='columns-title'>
+                      {column.headerName}
+                    </div>      
+                  </th>
         })}
         </tr>
       </thead>
