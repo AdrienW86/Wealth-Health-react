@@ -52,7 +52,7 @@ function Forms() {
         
 return(
     <>
-    <Formik
+    <Formik 
         initialValues={initialValues}                  
         validationSchema={validationSchema}
         onSubmit= {( values, {resetForm}) => {

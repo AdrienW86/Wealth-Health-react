@@ -79,8 +79,8 @@ export const tableData = [
         zip: '53093'
     },
     {  
-        firstname: 'Joe', 
-        lastname: 'Doe', 
+        firstname: 'Peter', 
+        lastname: 'Folks', 
         startDate: '2014/06/01', 
         department: 'Sales', 
         dateOfBirth: '1992/04/28', 
@@ -112,12 +112,12 @@ export const tableData = [
         zip: '02360'
     },
     {   
-        firstname: 'Joe', 
-        lastname: 'Doe', 
+        firstname: 'Billy', 
+        lastname: 'Nash', 
         startDate: '2014/10/07', 
         department: 'Sales', 
         dateOfBirth: '1992/11/11', 
-        street: 'avenue de la paix',
+        street: 'Sunset Boulevard',
         city: 'Hawai',
         state: 'HI',
         zip: '96701'
