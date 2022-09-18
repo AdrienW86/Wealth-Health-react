@@ -5,6 +5,12 @@ Welcome to HRnet! This is our company's internal application to create and view 
 ## Installation 
 ***
 
-Clone this repository and run > npm install
+Clone this repository and run 
 
-and run > npm start to launch the project.
+> npm install
+
+to install dependencies
+
+> npm start 
+
+to launch the project.
