@@ -4,7 +4,7 @@ h2 {
     font-size: 2em;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 968px) {
     h2 {
         font-size: 1em;
     }

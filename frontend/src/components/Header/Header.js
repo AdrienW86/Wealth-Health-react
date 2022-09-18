@@ -11,8 +11,6 @@ const [pathList, setPathList] = useState(false)
 const location = useLocation()
 const currentLocation = location.pathname
 
-
-
 useEffect(() => {
     if( currentLocation === "/list") {
         setPathList(true)
@@ -20,6 +18,7 @@ useEffect(() => {
     else{
         (setPathList(false)) 
     } 
+    // eslint-disable-next-line
   },[pathList])
 
   return (

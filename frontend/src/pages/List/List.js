@@ -5,24 +5,25 @@ import Pagination from '../../components/Pagination/Pagination';
 import SelectPages from '../../components/SelectPages/Select';
 import Table from '../../components/Table/Table';
 import Searchbar from '../../components/Searchbar/Searchbar';
-import { tableData } from '../../data/table';
+import {  useSelector } from 'react-redux';
 import './list.css'; 
 
 function List() {
   
+
+  const list = useSelector((state)=> state.staff)
+
+  console.table(list)
   const [value, setValue] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
   const [postsPerPage, setPostsPerPage] = useState(10)
   const [posts, setPosts] = useState([])
 
 useEffect(()=> {
-  const storage = JSON.parse(localStorage.getItem('list'))
-    if(storage === null) {
-      setPosts(tableData)
-    }else {
-      setPosts(storage)
-    }
-  },[])
+  
+      setPosts(list)
+    
+  },[list])
 
   const indexOfLastPost = currentPage * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage

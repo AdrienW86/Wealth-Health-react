@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { states } from '../../data/states';
 import { Formik , Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import './form.css';
 import { Modal } from 'modale-custom-react';
-import { tableData } from "../../data/table"
+import { useDispatch } from 'react-redux';
+import { add } from '../../redux/reducers'
 
 function Forms() {
 
     const [toggle, setToggle] = useState(false)
-    const [ data, setData ] = useState(null)
+   
+    const dispatch = useDispatch()
 
     const closeModal = () => {
         setToggle(false)
@@ -44,23 +46,10 @@ function Forms() {
         dateOfBirth: "", 
         street: "",
         city: "",
-        state: "",
+        state: "AL",
         zip: "",   
     }
         
-    if(localStorage.length === 0) {
-        console.log("init localestorage")
-        localStorage.setItem("list", JSON.stringify(tableData))
-    }
-    
-useEffect(() => {  
-    let storage = JSON.parse(localStorage.getItem("list"))
-        if(data !== null) {
-            storage.push(data)
-            localStorage.setItem("list", JSON.stringify(storage))
-        }      
-}, [data])
- 
 return(
     <>
     <Formik
@@ -72,7 +61,8 @@ return(
             values.startDate = values.startDate.replace(re, '/')
             values.zip = values.zip.toString()
             console.log(values.state)
-            setData(values)
+            dispatch(add(values))
+           
             resetForm()
             setToggle(true)           
         }}
