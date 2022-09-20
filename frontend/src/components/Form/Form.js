@@ -57,14 +57,17 @@ return(
         validationSchema={validationSchema}
         onSubmit= {( values, {resetForm}) => {
             let re = /-/gi;
+            values.firstname = values.firstname.charAt(0).toUpperCase() + values.firstname.slice(1)
+            values.lastname = values.lastname.charAt(0).toUpperCase() + values.lastname.slice(1)
+            values.street = values.street.charAt(0).toUpperCase() + values.street.slice(1)
+            values.city = values.city.charAt(0).toUpperCase() + values.city.slice(1)
             values.dateOfBirth = values.dateOfBirth.replace(re, '/')
             values.startDate = values.startDate.replace(re, '/')
             values.zip = values.zip.toString()
             console.log(values.state)
-            dispatch(add(values))
-           
+            dispatch(add(values))          
             resetForm()
-            setToggle(true)           
+            setToggle(true)            
         }}
     >
         <Form className='form' aria-label='form to add employee'>
